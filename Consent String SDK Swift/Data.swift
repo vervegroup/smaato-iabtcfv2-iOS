@@ -92,7 +92,7 @@ extension Data {
      */
     func data(fromBit startBit:Int64, toBit endBit:Int64) -> Data {
         let byteArray = bytes(fromBit: startBit, toBit: endBit)
-        return Data(bytes: byteArray)
+        return Data(byteArray)
     }
     
     /**
@@ -114,7 +114,7 @@ extension Data {
         while dataValue.count < 8 {
             dataValue.insert(0, at: 0)
         }
-        let value = UInt64(bigEndian: dataValue.withUnsafeBytes { $0.pointee })
+        let value = UInt64(bigEndian: dataValue.withUnsafeBytes { $0.load(as: UInt64.self) })
         return Int64(value)
     }
 

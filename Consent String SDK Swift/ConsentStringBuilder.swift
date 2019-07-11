@@ -196,7 +196,7 @@ private extension String {
     }
 
     func trimmedWebSafeBase64EncodedString() -> String {
-        let data = Data(bytes: split(by: 8).compactMap { UInt8($0, radix: 2) })
+        let data = Data(split(by: 8).compactMap { UInt8($0, radix: 2) })
         return data.base64EncodedString()
             .trimmingCharacters(in: ["="])
             .replacingOccurrences(of: "+", with: "-")
