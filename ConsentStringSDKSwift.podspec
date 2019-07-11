@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "ConsentStringSDKSwift"
-  spec.version      = "1.0.1"
+  spec.version      = "1.0.2"
   spec.summary      = "Encode and decode web-safe base64 consent information with the IAB EU's GDPR Transparency and Consent Framework."
 
   spec.description  = <<-DESC
