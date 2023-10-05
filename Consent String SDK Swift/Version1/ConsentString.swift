@@ -157,5 +157,4 @@ public class ConsentString: ConsentStringProtocol {
             return defaultConsent == 0 ? false : true
         }
     }
-    
 }

@@ -1,5 +1,10 @@
 # Transparency and Consent Framework: Consent-String-SDK-Swift
 
+## About this fork
+
+This fork adds the functionality for encoding and decoding TCString version 2
+
+---
 Encode and decode web-safe base64 consent information with the IAB EU's GDPR Transparency and Consent Framework.
 
 This library is a Swift reference implementation for dealing with consent strings in the IAB EU's GDPR Transparency and Consent Framework.  

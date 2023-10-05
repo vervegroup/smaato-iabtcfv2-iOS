@@ -15,6 +15,12 @@
 		0BA327D9228EC84900606697 /* ConsentStringBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA327D8228EC84900606697 /* ConsentStringBuilderTests.swift */; };
 		0BA327DB228ED14600606697 /* VendorEncodingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA327DA228ED14600606697 /* VendorEncodingType.swift */; };
 		0BAECEE12292B9A000CC4DDB /* BinaryStringTestSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAECEE02292B9A000CC4DDB /* BinaryStringTestSupport.swift */; };
+		50392CA52ACEAC38006A4D32 /* ConsentStringProtocolV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50392CA42ACEAC38006A4D32 /* ConsentStringProtocolV2.swift */; };
+		50392CA72ACEB0F3006A4D32 /* NSRange+BitRanges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50392CA62ACEB0F3006A4D32 /* NSRange+BitRanges.swift */; };
+		50392CA92ACEB1ED006A4D32 /* ConsentStringBuilderV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50392CA82ACEB1ED006A4D32 /* ConsentStringBuilderV2.swift */; };
+		50392CAB2ACEB2B6006A4D32 /* ConsentStringV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50392CAA2ACEB2B6006A4D32 /* ConsentStringV2.swift */; };
+		50392CAD2ACEC92B006A4D32 /* ConsentStringBuilderV2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50392CAC2ACEC92B006A4D32 /* ConsentStringBuilderV2Tests.swift */; };
+		50392CAF2ACEC96D006A4D32 /* ConsentStringBuildingV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50392CAE2ACEC96D006A4D32 /* ConsentStringBuildingV2.swift */; };
 		F142B52A2093A1C5001ABE60 /* Consent_String_SDK_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F142B5202093A1C5001ABE60 /* Consent_String_SDK_Swift.framework */; };
 		F142B52F2093A1C5001ABE60 /* Consent_String_SDK_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F142B52E2093A1C5001ABE60 /* Consent_String_SDK_SwiftTests.swift */; };
 		F142B5312093A1C5001ABE60 /* Consent_String_SDK_Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = F142B5232093A1C5001ABE60 /* Consent_String_SDK_Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -44,6 +50,12 @@
 		0BA327D8228EC84900606697 /* ConsentStringBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentStringBuilderTests.swift; sourceTree = "<group>"; };
 		0BA327DA228ED14600606697 /* VendorEncodingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorEncodingType.swift; sourceTree = "<group>"; };
 		0BAECEE02292B9A000CC4DDB /* BinaryStringTestSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryStringTestSupport.swift; sourceTree = "<group>"; };
+		50392CA42ACEAC38006A4D32 /* ConsentStringProtocolV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentStringProtocolV2.swift; sourceTree = "<group>"; };
+		50392CA62ACEB0F3006A4D32 /* NSRange+BitRanges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSRange+BitRanges.swift"; sourceTree = "<group>"; };
+		50392CA82ACEB1ED006A4D32 /* ConsentStringBuilderV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentStringBuilderV2.swift; sourceTree = "<group>"; };
+		50392CAA2ACEB2B6006A4D32 /* ConsentStringV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentStringV2.swift; sourceTree = "<group>"; };
+		50392CAC2ACEC92B006A4D32 /* ConsentStringBuilderV2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentStringBuilderV2Tests.swift; sourceTree = "<group>"; };
+		50392CAE2ACEC96D006A4D32 /* ConsentStringBuildingV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentStringBuildingV2.swift; sourceTree = "<group>"; };
 		F142B5202093A1C5001ABE60 /* Consent_String_SDK_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Consent_String_SDK_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F142B5232093A1C5001ABE60 /* Consent_String_SDK_Swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Consent_String_SDK_Swift.h; sourceTree = "<group>"; };
 		F142B5242093A1C5001ABE60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,6 +88,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		50392CA32ACEAC17006A4D32 /* Version2 */ = {
+			isa = PBXGroup;
+			children = (
+				50392CA42ACEAC38006A4D32 /* ConsentStringProtocolV2.swift */,
+				50392CA62ACEB0F3006A4D32 /* NSRange+BitRanges.swift */,
+				50392CA82ACEB1ED006A4D32 /* ConsentStringBuilderV2.swift */,
+				50392CAA2ACEB2B6006A4D32 /* ConsentStringV2.swift */,
+				50392CAE2ACEC96D006A4D32 /* ConsentStringBuildingV2.swift */,
+			);
+			path = Version2;
+			sourceTree = "<group>";
+		};
+		508889342ACF119F00331C27 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0BA327DA228ED14600606697 /* VendorEncodingType.swift */,
+				F142B53B2093A206001ABE60 /* ConsentStringError.swift */,
+				F142B53E2093A207001ABE60 /* Data.swift */,
+				0B8FBC75229558F3002F733D /* VendorIdentifier.swift */,
+				0BA327D4228EC1A300606697 /* Purpose.swift */,
+				F142B53D2093A207001ABE60 /* String.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		508889352ACF11B000331C27 /* Version1 */ = {
+			isa = PBXGroup;
+			children = (
+				F142B53C2093A206001ABE60 /* ConsentStringProtocol.swift */,
+				F142B53A2093A206001ABE60 /* ConsentString.swift */,
+				0BA327D2228EA54A00606697 /* ConsentStringBuilder.swift */,
+				0B3E03CD22A0206C0078D316 /* ConsentStringBuilding.swift */,
+				0B8FBC7122954495002F733D /* NSRange+ConsentString.swift */,
+			);
+			path = Version1;
+			sourceTree = "<group>";
+		};
 		F142B5162093A1C5001ABE60 = {
 			isa = PBXGroup;
 			children = (
@@ -97,19 +146,11 @@
 		F142B5222093A1C5001ABE60 /* Consent String SDK Swift */ = {
 			isa = PBXGroup;
 			children = (
-				F142B53C2093A206001ABE60 /* ConsentStringProtocol.swift */,
-				F142B53A2093A206001ABE60 /* ConsentString.swift */,
-				F142B53B2093A206001ABE60 /* ConsentStringError.swift */,
-				F142B53E2093A207001ABE60 /* Data.swift */,
-				F142B53D2093A207001ABE60 /* String.swift */,
+				508889342ACF119F00331C27 /* Common */,
+				508889352ACF11B000331C27 /* Version1 */,
+				50392CA32ACEAC17006A4D32 /* Version2 */,
 				F142B5232093A1C5001ABE60 /* Consent_String_SDK_Swift.h */,
 				F142B5242093A1C5001ABE60 /* Info.plist */,
-				0BA327D2228EA54A00606697 /* ConsentStringBuilder.swift */,
-				0B3E03CD22A0206C0078D316 /* ConsentStringBuilding.swift */,
-				0BA327D4228EC1A300606697 /* Purpose.swift */,
-				0B8FBC75229558F3002F733D /* VendorIdentifier.swift */,
-				0B8FBC7122954495002F733D /* NSRange+ConsentString.swift */,
-				0BA327DA228ED14600606697 /* VendorEncodingType.swift */,
 			);
 			path = "Consent String SDK Swift";
 			sourceTree = "<group>";
@@ -121,6 +162,7 @@
 				0BA327D8228EC84900606697 /* ConsentStringBuilderTests.swift */,
 				0BAECEE02292B9A000CC4DDB /* BinaryStringTestSupport.swift */,
 				F142B5302093A1C5001ABE60 /* Info.plist */,
+				50392CAC2ACEC92B006A4D32 /* ConsentStringBuilderV2Tests.swift */,
 			);
 			path = "Consent String SDK SwiftTests";
 			sourceTree = "<group>";
@@ -237,7 +279,9 @@
 			files = (
 				F142B5432093A207001ABE60 /* ConsentStringProtocol.swift in Sources */,
 				0BA327D5228EC1A300606697 /* Purpose.swift in Sources */,
+				50392CAB2ACEB2B6006A4D32 /* ConsentStringV2.swift in Sources */,
 				0B8FBC76229558F3002F733D /* VendorIdentifier.swift in Sources */,
+				50392CA52ACEAC38006A4D32 /* ConsentStringProtocolV2.swift in Sources */,
 				0BA327D3228EA54A00606697 /* ConsentStringBuilder.swift in Sources */,
 				0BA327DB228ED14600606697 /* VendorEncodingType.swift in Sources */,
 				0B8FBC7222954495002F733D /* NSRange+ConsentString.swift in Sources */,
@@ -246,6 +290,9 @@
 				F142B5452093A207001ABE60 /* String.swift in Sources */,
 				F142B53F2093A207001ABE60 /* ConsentString.swift in Sources */,
 				0B3E03CE22A0206C0078D316 /* ConsentStringBuilding.swift in Sources */,
+				50392CA72ACEB0F3006A4D32 /* NSRange+BitRanges.swift in Sources */,
+				50392CA92ACEB1ED006A4D32 /* ConsentStringBuilderV2.swift in Sources */,
+				50392CAF2ACEC96D006A4D32 /* ConsentStringBuildingV2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F142B52F2093A1C5001ABE60 /* Consent_String_SDK_SwiftTests.swift in Sources */,
+				50392CAD2ACEC92B006A4D32 /* ConsentStringBuilderV2Tests.swift in Sources */,
 				0BAECEE12292B9A000CC4DDB /* BinaryStringTestSupport.swift in Sources */,
 				0BA327D9228EC84900606697 /* ConsentStringBuilderTests.swift in Sources */,
 			);
