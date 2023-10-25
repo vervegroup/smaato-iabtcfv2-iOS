@@ -2,7 +2,7 @@
 
 ## About this fork
 
-This fork adds the functionality for encoding and decoding TCString version 2
+This fork implements the encoding and decoding of TCString version 2. Only the [Core String segment](https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework/blob/master/TCFv2/IAB%20Tech%20Lab%20-%20Consent%20string%20and%20vendor%20list%20formats%20v2.md#the-core-string) is supported. Pay attention that the result TCString is not a web-safe base64 string.
 
 ---
 Encode and decode web-safe base64 consent information with the IAB EU's GDPR Transparency and Consent Framework.
