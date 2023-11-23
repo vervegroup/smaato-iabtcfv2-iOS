@@ -90,6 +90,9 @@ public class ConsentStringBuilderV2: ConsentStringBuildingV2 {
             } else {
                 consentString.append(bitFieldsForVendorConsent)
             }
+        } else {
+            // IsARange value always needs to be encoded
+            consentString.append(encode(integer: VendorEncodingType.bitField.rawValue, toLength: NSRange.encodingType.length))
         }
 
         // Vendors legitimate interest
@@ -105,6 +108,9 @@ public class ConsentStringBuilderV2: ConsentStringBuildingV2 {
             } else {
                 consentString.append(bitFieldsForVendorLegitimateInterest)
             }
+        } else {
+            // IsARange value always needs to be encoded
+            consentString.append(encode(integer: VendorEncodingType.bitField.rawValue, toLength: NSRange.encodingType.length))
         }
 
         // NumPubRestrictions. 0 means no publisher's restrictions
