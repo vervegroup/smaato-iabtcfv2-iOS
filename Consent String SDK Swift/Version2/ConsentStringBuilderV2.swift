@@ -119,7 +119,7 @@ public class ConsentStringBuilderV2: ConsentStringBuildingV2 {
 
         return consentString
             .padRight(toNearestMultipleOf: 8)
-            .trimmedBase64EncodedString()
+            .trimmedWebSafeBase64EncodedString()
     }
 
     func bitFieldBinaryString(allowedVendorIds: Set<VendorIdentifier>, maxVendorId: VendorIdentifier) -> String {
@@ -254,10 +254,12 @@ private extension String {
         return results.map { String($0) }
     }
 
-    func trimmedBase64EncodedString() -> String {
-        let data = Data(bytes: split(by: 8).compactMap { UInt8($0, radix: 2) })
+    func trimmedWebSafeBase64EncodedString() -> String {
+        let data = Data(split(by: 8).compactMap { UInt8($0, radix: 2) })
         return data.base64EncodedString()
             .trimmingCharacters(in: ["="])
+            .replacingOccurrences(of: "+", with: "-")
+            .replacingOccurrences(of: "/", with: "_")
     }
 }
 

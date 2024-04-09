@@ -7,23 +7,18 @@ public class ConsentStringV2: ConsentStringV2Protocol {
 
     required public init(consentString: String) throws {
         self.consentString = consentString
-        guard let dataValue = Data(base64Encoded: self.consentString.base64Padded) else {
+        guard let dataValue = Data(
+            base64Encoded: self.consentString
+                .base64Padded
+                .replacingOccurrences(of: "-", with: "+")
+                .replacingOccurrences(of: "_", with: "/")
+        ) else {
             throw ConsentStringError.base64DecodingFailed
         }
         consentData = dataValue
     }
 
-    public var consentString: String {
-        //error correction in didSet resets old value if base64decoding fails
-        didSet {
-            guard let dataValue = Data(base64Encoded: consentString.base64Padded) else {
-                print("New Consent String Value is not base64 decodable. Throwing away changes.")
-                consentString = oldValue
-                return
-            }
-            consentData = dataValue
-        }
-    }
+    public let consentString: String
 
     public var dateCreated: Date {
         let timeIntervalDecseconds = Int(consentData.intValue(for: NSRange.V2.created))

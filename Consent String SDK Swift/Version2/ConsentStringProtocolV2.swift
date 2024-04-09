@@ -11,7 +11,7 @@ public protocol ConsentStringV2Protocol {
     var dateCreated: Date { get }
     var dateUpdated: Date { get }
 
-    var consentString: String { get set }
+    var consentString: String { get }
     var cmpId: Int { get }
     var consentScreen: Int { get }
     var consentLanguage: String { get }
