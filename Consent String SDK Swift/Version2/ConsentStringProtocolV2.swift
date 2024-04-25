@@ -4,7 +4,7 @@ import Foundation
 public typealias PurposeIdentifier = Int16
 public typealias FeatureIdentifier = Int16
 
-public protocol ConsentStringV2Protocol {
+@objc public protocol ConsentStringV2Protocol {
 
     init(consentString: String) throws
 
