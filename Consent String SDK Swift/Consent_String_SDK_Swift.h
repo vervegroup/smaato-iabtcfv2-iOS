@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
+@class ConsentStringV2;
 //! Project version number for Consent_String_SDK_Swift.
 FOUNDATION_EXPORT double Consent_String_SDK_SwiftVersionNumber;
 
