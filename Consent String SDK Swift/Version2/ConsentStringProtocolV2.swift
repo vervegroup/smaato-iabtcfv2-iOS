@@ -6,35 +6,35 @@ public typealias FeatureIdentifier = Int16
 
 @objc public protocol ConsentStringV2Protocol {
 
-    init(consentString: String) throws
+   @objc init(consentString: String) throws
 
-    var dateCreated: Date { get }
-    var dateUpdated: Date { get }
+   @objc var dateCreated: Date { get }
+    @objc var dateUpdated: Date { get }
 
-    var consentString: String { get }
-    var cmpId: Int { get }
-    var consentScreen: Int { get }
-    var consentLanguage: String { get }
+    @objc  var consentString: String { get }
+    @objc  var cmpId: Int { get }
+    @objc var consentScreen: Int { get }
+    @objc var consentLanguage: String { get }
 
-    var publisherCC: String { get }
-    var vendorListVersion: Int8 { get }
+    @objc var publisherCC: String { get }
+    @objc var vendorListVersion: Int8 { get }
 
-    var tfcPolicyVersion: Int8 { get }
-    var isServiceSpecific: Int8 { get }
-    var useNonStandardTexts: Int8 { get }
-    var purposeOneTreatment: Int8 { get }
+    @objc var tfcPolicyVersion: Int8 { get }
+    @objc var isServiceSpecific: Int8 { get }
+    @objc var useNonStandardTexts: Int8 { get }
+    @objc var purposeOneTreatment: Int8 { get }
 
-    var specialFeatureOptIns: Set<FeatureIdentifier> { get }
+    @objc var specialFeatureOptIns: Set<FeatureIdentifier> { get }
 
-    var purposeConsents: Set<PurposeIdentifier> { get }
-    func purposeConsent(forPurposeId purposeId: PurposeIdentifier) -> Bool
+    @objc var purposeConsents: Set<PurposeIdentifier> { get }
+    @objc func purposeConsent(forPurposeId purposeId: PurposeIdentifier) -> Bool
 
-    var purposeLegitimateInterests: Set<PurposeIdentifier> { get }
-    func purposeLegitimateInterest(forPurposeId purposeId: PurposeIdentifier) -> Bool
+    @objc var purposeLegitimateInterests: Set<PurposeIdentifier> { get }
+    @objc func purposeLegitimateInterest(forPurposeId purposeId: PurposeIdentifier) -> Bool
 
-    var maxVendorIdForConsents: VendorIdentifier { get }
-    func isVendorAllowed(vendorId: VendorIdentifier) -> Bool
+    @objc var maxVendorIdForConsents: VendorIdentifier { get }
+    @objc func isVendorAllowed(vendorId: VendorIdentifier) -> Bool
 
-    var maxVendorIdForLegitimateInterests: VendorIdentifier { get }
-    func isLegitimateInterestForVendorAllowed(vendorId: VendorIdentifier) -> Bool
+    @objc var maxVendorIdForLegitimateInterests: VendorIdentifier { get }
+    @objc func isLegitimateInterestForVendorAllowed(vendorId: VendorIdentifier) -> Bool
 }
