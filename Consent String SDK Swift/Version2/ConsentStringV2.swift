@@ -18,63 +18,63 @@ public class ConsentStringV2: ConsentStringV2Protocol {
         consentData = dataValue
     }
 
-    public let consentString: String
+   @objc public let consentString: String
 
-    public var dateCreated: Date {
+  @objc public var dateCreated: Date {
         let timeIntervalDecseconds = Int(consentData.intValue(for: NSRange.V2.created))
         let timeInterval = TimeInterval(timeIntervalDecseconds / 10)
         return Date(timeIntervalSince1970: timeInterval)
     }
 
-    public var dateUpdated: Date {
+    @objc public var dateUpdated: Date {
         let timeIntervalDecseconds = Int(consentData.intValue(for: NSRange.V2.created))
         let timeInterval = TimeInterval(timeIntervalDecseconds / 10)
         return Date(timeIntervalSince1970: timeInterval)
     }
 
-    public var cmpId: Int {
+    @objc public var cmpId: Int {
         return Int(consentData.intValue(for: NSRange.V2.cmpIdentifier))
     }
 
-    public var consentScreen: Int {
+    @objc public var consentScreen: Int {
         return Int(consentData.intValue(for: NSRange.V2.consentScreen))
     }
 
-    public var consentLanguage: String {
+    @objc public var consentLanguage: String {
         var data = consentData.data(for: .consentLanguage)
         data.insert(0, at: 0)
         let string = data.base64EncodedString()
         return String(string[string.index(string.startIndex, offsetBy: 2)...])
     }
 
-    public var publisherCC: String {
+    @objc public var publisherCC: String {
         var data = consentData.data(for: NSRange.V2.publisherCC)
         data.insert(0, at: 0)
         let string = data.base64EncodedString()
         return String(string[string.index(string.startIndex, offsetBy: 2)...])
     }
 
-    public var vendorListVersion: Int8 {
+    @objc public var vendorListVersion: Int8 {
         return Int8(consentData.intValue(for: NSRange.V2.vendorListVersion))
     }
 
-    public var tfcPolicyVersion: Int8 {
+    @objc public var tfcPolicyVersion: Int8 {
         return Int8(consentData.intValue(for: NSRange.V2.tcfPolicyVersion))
     }
 
-    public var isServiceSpecific: Int8 {
+    @objc public var isServiceSpecific: Int8 {
         return Int8(consentData.intValue(for: NSRange.V2.isServiceSpecific))
     }
 
-    public var useNonStandardTexts: Int8 {
+    @objc public var useNonStandardTexts: Int8 {
         return Int8(consentData.intValue(for: NSRange.V2.useNonStandardTexts))
     }
 
-    public var purposeOneTreatment: Int8 {
+    @objc public var purposeOneTreatment: Int8 {
         return Int8(consentData.intValue(for: NSRange.V2.purposeOneTreatment))
     }
 
-    public var specialFeatureOptIns: Set<FeatureIdentifier> {
+    @objc public var specialFeatureOptIns: Set<FeatureIdentifier> {
         var result = Set<FeatureIdentifier>()
         for specialFeatureId in 1...NSRange.V2.specialFeatureOptIns.length {
             let specialFeatureBit = Int64(NSRange.V2.specialFeatureOptIns.lowerBound - 1 + specialFeatureId)
@@ -86,7 +86,7 @@ public class ConsentStringV2: ConsentStringV2Protocol {
         return result
     }
 
-    public var purposeConsents: Set<PurposeIdentifier> {
+    @objc public var purposeConsents: Set<PurposeIdentifier> {
         var results = Set<PurposeIdentifier>()
         for purposeId in 1...NSRange.V2.purposesConsent.length {
             let purposeBit = Int64(NSRange.V2.purposesConsent.lowerBound - 1 + purposeId)
@@ -98,11 +98,11 @@ public class ConsentStringV2: ConsentStringV2Protocol {
         return results
     }
 
-    public func purposeConsent(forPurposeId purposeId: PurposeIdentifier) -> Bool {
+    @objc public func purposeConsent(forPurposeId purposeId: PurposeIdentifier) -> Bool {
         purposeConsents.contains(purposeId)
     }
 
-    public var purposeLegitimateInterests: Set<PurposeIdentifier> {
+    @objc public var purposeLegitimateInterests: Set<PurposeIdentifier> {
         var result = Set<PurposeIdentifier>()
         for purposeLegIntId in 1...NSRange.V2.purposesLITransparency.length {
             let purposeLegIntBit = Int64(NSRange.V2.purposesLITransparency.lowerBound - 1 + purposeLegIntId)
@@ -114,15 +114,15 @@ public class ConsentStringV2: ConsentStringV2Protocol {
         return result
     }
 
-    public func purposeLegitimateInterest(forPurposeId purposeId: PurposeIdentifier) -> Bool {
+    @objc public func purposeLegitimateInterest(forPurposeId purposeId: PurposeIdentifier) -> Bool {
         purposeLegitimateInterests.contains(purposeId)
     }
 
-    public var maxVendorIdForConsents: VendorIdentifier {
+    @objc public var maxVendorIdForConsents: VendorIdentifier {
         return VendorIdentifier(consentData.intValue(for: NSRange.V2.maxVendorIdentifierForConsent))
     }
 
-    public func isVendorAllowed(vendorId: VendorIdentifier) -> Bool {
+    @objc public func isVendorAllowed(vendorId: VendorIdentifier) -> Bool {
         if vendorId > maxVendorIdForConsents {
             return false
         }
@@ -169,12 +169,12 @@ public class ConsentStringV2: ConsentStringV2Protocol {
         }
     }
 
-    public var maxVendorIdForLegitimateInterests: VendorIdentifier {
+    @objc public var maxVendorIdForLegitimateInterests: VendorIdentifier {
         let maxVendorIdForLegInt = VendorIdentifier(consentData.intValue(for: NSRange(location: startOfVendorLegitimateInterestSection, length: 16)))
         return maxVendorIdForLegInt
     }
 
-    public func isLegitimateInterestForVendorAllowed(vendorId: VendorIdentifier) -> Bool {
+    @objc public func isLegitimateInterestForVendorAllowed(vendorId: VendorIdentifier) -> Bool {
         let maxVendorIdForLegIntLocation = startOfVendorLegitimateInterestSection
         let maxVendorIdForLegInt = Int(consentData.intValue(for: NSRange(location: maxVendorIdForLegIntLocation, length: 16)))
         if vendorId > maxVendorIdForLegInt {
