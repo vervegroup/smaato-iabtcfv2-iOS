@@ -1,7 +1,7 @@
 
 import Foundation
 
-public class ConsentStringV2: ConsentStringV2Protocol {
+@objc public class ConsentStringV2: NSObject, ConsentStringV2Protocol {
 
     // MARK: - ConsentStringV2Protocol
 
@@ -54,24 +54,24 @@ public class ConsentStringV2: ConsentStringV2Protocol {
         return String(string[string.index(string.startIndex, offsetBy: 2)...])
     }
 
-    @objc public var vendorListVersion: Int8 {
-        return Int8(consentData.intValue(for: NSRange.V2.vendorListVersion))
+    @objc public var vendorListVersion: Int16 {
+        return Int16(consentData.intValue(for: NSRange.V2.vendorListVersion))
     }
 
-    @objc public var tfcPolicyVersion: Int8 {
-        return Int8(consentData.intValue(for: NSRange.V2.tcfPolicyVersion))
+    @objc public var tfcPolicyVersion: Int16 {
+        return Int16(consentData.intValue(for: NSRange.V2.tcfPolicyVersion))
     }
 
-    @objc public var isServiceSpecific: Int8 {
-        return Int8(consentData.intValue(for: NSRange.V2.isServiceSpecific))
+    @objc public var isServiceSpecific: Int16 {
+        return Int16(consentData.intValue(for: NSRange.V2.isServiceSpecific))
     }
 
-    @objc public var useNonStandardTexts: Int8 {
-        return Int8(consentData.intValue(for: NSRange.V2.useNonStandardTexts))
+    @objc public var useNonStandardTexts: Int16 {
+        return Int16(consentData.intValue(for: NSRange.V2.useNonStandardTexts))
     }
 
-    @objc public var purposeOneTreatment: Int8 {
-        return Int8(consentData.intValue(for: NSRange.V2.purposeOneTreatment))
+    @objc public var purposeOneTreatment: Int16 {
+        return Int16(consentData.intValue(for: NSRange.V2.purposeOneTreatment))
     }
 
     @objc public var specialFeatureOptIns: Set<FeatureIdentifier> {

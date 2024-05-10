@@ -12,7 +12,7 @@ extension String {
     
     var base64Padded:String {
         get {
-            return self.padding(toLength: ((self.count + 3) / 4) * 4,withPad: "=",startingAt: 0)
+            return self.padding(toLength: (self.utf16.count + (4 - (self.utf16.count % 4))),withPad: "=",startingAt: 0)
         }
     }
 

@@ -17,12 +17,12 @@ public typealias FeatureIdentifier = Int16
     @objc var consentLanguage: String { get }
 
     @objc var publisherCC: String { get }
-    @objc var vendorListVersion: Int8 { get }
+    @objc var vendorListVersion: Int16 { get }
 
-    @objc var tfcPolicyVersion: Int8 { get }
-    @objc var isServiceSpecific: Int8 { get }
-    @objc var useNonStandardTexts: Int8 { get }
-    @objc var purposeOneTreatment: Int8 { get }
+    @objc var tfcPolicyVersion: Int16 { get }
+    @objc var isServiceSpecific: Int16 { get }
+    @objc var useNonStandardTexts: Int16 { get }
+    @objc var purposeOneTreatment: Int16 { get }
 
     @objc var specialFeatureOptIns: Set<FeatureIdentifier> { get }
 
