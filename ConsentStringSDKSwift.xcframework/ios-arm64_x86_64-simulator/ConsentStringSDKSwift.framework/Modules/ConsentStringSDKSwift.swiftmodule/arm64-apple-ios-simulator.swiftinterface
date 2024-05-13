@@ -1,0 +1,176 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ConsentStringSDKSwift
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Foundation
+import Swift
+import _Concurrency
+import _StringProcessing
+public struct Purposes : Swift.OptionSet {
+  public static let storageAndAccess: ConsentStringSDKSwift.Purposes
+  public static let personalization: ConsentStringSDKSwift.Purposes
+  public static let adSelection: ConsentStringSDKSwift.Purposes
+  public static let contentDelivery: ConsentStringSDKSwift.Purposes
+  public static let measurement: ConsentStringSDKSwift.Purposes
+  public static let all: ConsentStringSDKSwift.Purposes
+  public let rawValue: Swift.Int
+  public init(rawValue: Swift.Int)
+  public typealias ArrayLiteralElement = ConsentStringSDKSwift.Purposes
+  public typealias Element = ConsentStringSDKSwift.Purposes
+  public typealias RawValue = Swift.Int
+}
+@objc public class ConsentStringV2 : ObjectiveC.NSObject, ConsentStringSDKSwift.ConsentStringV2Protocol {
+  @objc required public init(consentString: Swift.String) throws
+  @objc final public let consentString: Swift.String
+  @objc public var dateCreated: Foundation.Date {
+    @objc get
+  }
+  @objc public var dateUpdated: Foundation.Date {
+    @objc get
+  }
+  @objc public var cmpId: Swift.Int {
+    @objc get
+  }
+  @objc public var consentScreen: Swift.Int {
+    @objc get
+  }
+  @objc public var consentLanguage: Swift.String {
+    @objc get
+  }
+  @objc public var publisherCC: Swift.String {
+    @objc get
+  }
+  @objc public var vendorListVersion: Swift.Int16 {
+    @objc get
+  }
+  @objc public var tfcPolicyVersion: Swift.Int16 {
+    @objc get
+  }
+  @objc public var isServiceSpecific: Swift.Int16 {
+    @objc get
+  }
+  @objc public var useNonStandardTexts: Swift.Int16 {
+    @objc get
+  }
+  @objc public var purposeOneTreatment: Swift.Int16 {
+    @objc get
+  }
+  @objc public var specialFeatureOptIns: Swift.Set<ConsentStringSDKSwift.FeatureIdentifier> {
+    @objc get
+  }
+  @objc public var purposeConsents: Swift.Set<ConsentStringSDKSwift.PurposeIdentifier> {
+    @objc get
+  }
+  @objc public func purposeConsent(forPurposeId purposeId: ConsentStringSDKSwift.PurposeIdentifier) -> Swift.Bool
+  @objc public var purposeLegitimateInterests: Swift.Set<ConsentStringSDKSwift.PurposeIdentifier> {
+    @objc get
+  }
+  @objc public func purposeLegitimateInterest(forPurposeId purposeId: ConsentStringSDKSwift.PurposeIdentifier) -> Swift.Bool
+  @objc public var maxVendorIdForConsents: ConsentStringSDKSwift.VendorIdentifier {
+    @objc get
+  }
+  @objc public func isVendorAllowed(vendorId: ConsentStringSDKSwift.VendorIdentifier) -> Swift.Bool
+  @objc public var maxVendorIdForLegitimateInterests: ConsentStringSDKSwift.VendorIdentifier {
+    @objc get
+  }
+  @objc public func isLegitimateInterestForVendorAllowed(vendorId: ConsentStringSDKSwift.VendorIdentifier) -> Swift.Bool
+  @objc deinit
+}
+public typealias VendorIdentifier = Swift.Int16
+public typealias PurposeIdentifier = Swift.Int16
+public typealias FeatureIdentifier = Swift.Int16
+@objc public protocol ConsentStringV2Protocol {
+  @objc init(consentString: Swift.String) throws
+  @objc var dateCreated: Foundation.Date { get }
+  @objc var dateUpdated: Foundation.Date { get }
+  @objc var consentString: Swift.String { get }
+  @objc var cmpId: Swift.Int { get }
+  @objc var consentScreen: Swift.Int { get }
+  @objc var consentLanguage: Swift.String { get }
+  @objc var publisherCC: Swift.String { get }
+  @objc var vendorListVersion: Swift.Int16 { get }
+  @objc var tfcPolicyVersion: Swift.Int16 { get }
+  @objc var isServiceSpecific: Swift.Int16 { get }
+  @objc var useNonStandardTexts: Swift.Int16 { get }
+  @objc var purposeOneTreatment: Swift.Int16 { get }
+  @objc var specialFeatureOptIns: Swift.Set<ConsentStringSDKSwift.FeatureIdentifier> { get }
+  @objc var purposeConsents: Swift.Set<ConsentStringSDKSwift.PurposeIdentifier> { get }
+  @objc func purposeConsent(forPurposeId purposeId: ConsentStringSDKSwift.PurposeIdentifier) -> Swift.Bool
+  @objc var purposeLegitimateInterests: Swift.Set<ConsentStringSDKSwift.PurposeIdentifier> { get }
+  @objc func purposeLegitimateInterest(forPurposeId purposeId: ConsentStringSDKSwift.PurposeIdentifier) -> Swift.Bool
+  @objc var maxVendorIdForConsents: ConsentStringSDKSwift.VendorIdentifier { get }
+  @objc func isVendorAllowed(vendorId: ConsentStringSDKSwift.VendorIdentifier) -> Swift.Bool
+  @objc var maxVendorIdForLegitimateInterests: ConsentStringSDKSwift.VendorIdentifier { get }
+  @objc func isLegitimateInterestForVendorAllowed(vendorId: ConsentStringSDKSwift.VendorIdentifier) -> Swift.Bool
+}
+public class ConsentStringBuilder : ConsentStringSDKSwift.ConsentStringBuilding {
+  public init()
+  public func build(created: Foundation.Date, updated: Foundation.Date, cmpId: Swift.Int, cmpVersion: Swift.Int, consentScreenId: Swift.Int, consentLanguage: Swift.String, allowedPurposes: ConsentStringSDKSwift.Purposes, vendorListVersion: Swift.Int, maxVendorId: ConsentStringSDKSwift.VendorIdentifier, defaultConsent: Swift.Bool, allowedVendorIds: Swift.Set<ConsentStringSDKSwift.VendorIdentifier>) throws -> Swift.String
+  public func encode(purposeBitFieldForPurposes purposes: ConsentStringSDKSwift.Purposes) -> Swift.String
+  public func encode(vendorBitFieldForVendors vendors: Swift.Set<ConsentStringSDKSwift.VendorIdentifier>, maxVendorId: ConsentStringSDKSwift.VendorIdentifier) -> Swift.String
+  @objc deinit
+}
+extension ConsentStringSDKSwift.ConsentString {
+  convenience public init(created: Foundation.Date = Date(), updated: Foundation.Date = Date(), cmpId: Swift.Int, cmpVersion: Swift.Int, consentScreenId: Swift.Int, consentLanguage: Swift.String, allowedPurposes: ConsentStringSDKSwift.Purposes, vendorListVersion: Swift.Int, maxVendorId: ConsentStringSDKSwift.VendorIdentifier, defaultConsent: Swift.Bool = false, allowedVendorIds: Swift.Set<ConsentStringSDKSwift.VendorIdentifier>) throws
+}
+public enum ConsentStringError : Swift.Error {
+  case base64DecodingFailed
+  public static func == (a: ConsentStringSDKSwift.ConsentStringError, b: ConsentStringSDKSwift.ConsentStringError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public class ConsentString {
+  public var consentString: Swift.String {
+    get
+    set
+  }
+  required public init(consentString: Swift.String) throws
+  public var cmpId: Swift.Int {
+    get
+  }
+  public var consentScreen: Swift.Int {
+    get
+  }
+  public var consentLanguage: Swift.String {
+    get
+  }
+  public var purposesAllowed: [Swift.Int8] {
+    get
+  }
+  public func purposeAllowed(forPurposeId purposeId: Swift.Int8) -> Swift.Bool
+  public var vendorListVersion: Swift.Int {
+    get
+  }
+  public var maxVendorId: Swift.Int {
+    get
+  }
+  public func isVendorAllowed(vendorId: Swift.Int) -> Swift.Bool
+  @objc deinit
+}
+public protocol ConsentStringBuilding {
+  func build(created: Foundation.Date, updated: Foundation.Date, cmpId: Swift.Int, cmpVersion: Swift.Int, consentScreenId: Swift.Int, consentLanguage: Swift.String, allowedPurposes: ConsentStringSDKSwift.Purposes, vendorListVersion: Swift.Int, maxVendorId: ConsentStringSDKSwift.VendorIdentifier, defaultConsent: Swift.Bool, allowedVendorIds: Swift.Set<ConsentStringSDKSwift.VendorIdentifier>) throws -> Swift.String
+  func encode(purposeBitFieldForPurposes purposes: ConsentStringSDKSwift.Purposes) -> Swift.String
+  func encode(vendorBitFieldForVendors vendors: Swift.Set<ConsentStringSDKSwift.VendorIdentifier>, maxVendorId: ConsentStringSDKSwift.VendorIdentifier) -> Swift.String
+}
+extension ConsentStringSDKSwift.ConsentStringBuilding {
+  public func build(cmpId: Swift.Int, cmpVersion: Swift.Int, consentScreenId: Swift.Int, consentLanguage: Swift.String, allowedPurposes: ConsentStringSDKSwift.Purposes, vendorListVersion: Swift.Int, maxVendorId: ConsentStringSDKSwift.VendorIdentifier, defaultConsent: Swift.Bool, allowedVendorIds: Swift.Set<ConsentStringSDKSwift.VendorIdentifier>) throws -> Swift.String
+}
+public class ConsentStringBuilderV2 : ConsentStringSDKSwift.ConsentStringBuildingV2 {
+  public init(now: @escaping () -> Foundation.Date = { Date() })
+  public func build(created: Foundation.Date, updated: Foundation.Date, cmpId: Swift.Int, cmpVersion: Swift.Int, consentScreenId: Swift.Int, consentLanguage: Swift.String, vendorListVersion: Swift.Int16, tcfPolicyVersion: Swift.Int16, isServiceSpecific: Swift.Int16, useNonStandardTexts: Swift.Int16, specialFeatureOptIns: Swift.Set<ConsentStringSDKSwift.FeatureIdentifier>, purposeConsents: Swift.Set<ConsentStringSDKSwift.PurposeIdentifier>, purposeLegitimateInterests: Swift.Set<ConsentStringSDKSwift.PurposeIdentifier>, purposeOneTreatment: Swift.Int16, publisherCC: Swift.String, maxVendorIdForConsents: ConsentStringSDKSwift.VendorIdentifier, allowedVendorIds: Swift.Set<ConsentStringSDKSwift.VendorIdentifier>, maxVendorIdForLegitimateInterests: ConsentStringSDKSwift.VendorIdentifier, legitimateInterestsForVendorIds: Swift.Set<ConsentStringSDKSwift.VendorIdentifier>) throws -> Swift.String
+  public func encode(purposeBitFieldForPurposes purposes: ConsentStringSDKSwift.Purposes) -> Swift.String
+  public func encode(vendorBitFieldForVendors vendors: Swift.Set<ConsentStringSDKSwift.VendorIdentifier>, maxVendorId: ConsentStringSDKSwift.VendorIdentifier) -> Swift.String
+  public func encode(intSet set: Swift.Set<Swift.Int16>, toLength: Swift.Int) -> Swift.String
+  @objc deinit
+}
+extension ConsentStringSDKSwift.ConsentStringBuilderV2 {
+  public func build(cmpId: Swift.Int, cmpVersion: Swift.Int, consentScreenId: Swift.Int, consentLanguage: Swift.String, vendorListVersion: Swift.Int16, tcfPolicyVersion: Swift.Int16, useNonStandardTexts: Swift.Int16, specialFeatureOptIns: Swift.Set<ConsentStringSDKSwift.FeatureIdentifier>, purposeConsents: Swift.Set<ConsentStringSDKSwift.PurposeIdentifier>, purposeLegitimateInterests: Swift.Set<ConsentStringSDKSwift.PurposeIdentifier>, purposeOneTreatment: Swift.Int16, publisherCC: Swift.String, allowedVendorIds: Swift.Set<ConsentStringSDKSwift.VendorIdentifier>, legitimateInterestsForVendorIds: Swift.Set<ConsentStringSDKSwift.VendorIdentifier>) throws -> Swift.String
+}
+public protocol ConsentStringBuildingV2 {
+  func build(created: Foundation.Date, updated: Foundation.Date, cmpId: Swift.Int, cmpVersion: Swift.Int, consentScreenId: Swift.Int, consentLanguage: Swift.String, vendorListVersion: Swift.Int16, tcfPolicyVersion: Swift.Int16, isServiceSpecific: Swift.Int16, useNonStandardTexts: Swift.Int16, specialFeatureOptIns: Swift.Set<ConsentStringSDKSwift.FeatureIdentifier>, purposeConsents: Swift.Set<ConsentStringSDKSwift.PurposeIdentifier>, purposeLegitimateInterests: Swift.Set<ConsentStringSDKSwift.PurposeIdentifier>, purposeOneTreatment: Swift.Int16, publisherCC: Swift.String, maxVendorIdForConsents: ConsentStringSDKSwift.VendorIdentifier, allowedVendorIds: Swift.Set<ConsentStringSDKSwift.VendorIdentifier>, maxVendorIdForLegitimateInterests: ConsentStringSDKSwift.VendorIdentifier, legitimateInterestsForVendorIds: Swift.Set<ConsentStringSDKSwift.VendorIdentifier>) throws -> Swift.String
+  func build(cmpId: Swift.Int, cmpVersion: Swift.Int, consentScreenId: Swift.Int, consentLanguage: Swift.String, vendorListVersion: Swift.Int16, tcfPolicyVersion: Swift.Int16, useNonStandardTexts: Swift.Int16, specialFeatureOptIns: Swift.Set<ConsentStringSDKSwift.FeatureIdentifier>, purposeConsents: Swift.Set<ConsentStringSDKSwift.PurposeIdentifier>, purposeLegitimateInterests: Swift.Set<ConsentStringSDKSwift.PurposeIdentifier>, purposeOneTreatment: Swift.Int16, publisherCC: Swift.String, allowedVendorIds: Swift.Set<ConsentStringSDKSwift.VendorIdentifier>, legitimateInterestsForVendorIds: Swift.Set<ConsentStringSDKSwift.VendorIdentifier>) throws -> Swift.String
+}
+extension ConsentStringSDKSwift.ConsentStringError : Swift.Equatable {}
+extension ConsentStringSDKSwift.ConsentStringError : Swift.Hashable {}

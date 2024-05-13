@@ -17,7 +17,7 @@ DESC
   spec.author       = { "Smaato" => "amit.angarkar@smaato.com" }
   spec.platform     = :ios, "12.0"
   spec.source       = { :git => "https://github.com/vervegroup/smaato-iabtcfv2-iOS.git", :tag => '1.0.0' }
-  spec.ios.vendored_frameworks = ‘*/ConsentStringSDKSwift.xcframework'
+  spec.vendored_frameworks = "ConsentStringSDKSwift.xcframework"
   spec.swift_version = '5.0'
 
 end
