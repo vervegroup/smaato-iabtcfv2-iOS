@@ -1,0 +1,4 @@
+framework module ConsentStringSDKSwift {
+  header "ConsentStringSDKSwift-Swift.h"
+  requires objc
+}

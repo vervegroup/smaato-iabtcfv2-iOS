@@ -1,5 +1,5 @@
 Pod::Spec.new do |spec|
-  spec.name         = "SMAConsentStringV2SDKSwift"
+  spec.name         = "SMAConsentStringV2"
   spec.version      = "1.0.0"
   spec.summary      = "Encode and decode web-safe base64 consent information with the IAB EU's GDPR Transparency and Consent Framework."
 
@@ -17,7 +17,7 @@ DESC
   spec.author       = { "Smaato" => "amit.angarkar@smaato.com" }
   spec.platform     = :ios, "12.0"
   spec.source       = { :git => "https://github.com/vervegroup/smaato-iabtcfv2-iOS.git", :tag => '1.0.0' }
-  spec.source_files  = "Consent String SDK Swift/**/*.{swift,h}"
+  spec.ios.vendored_frameworks = ‘*/ConsentStringSDKSwift.xcframework'
   spec.swift_version = '5.0'
 
 end

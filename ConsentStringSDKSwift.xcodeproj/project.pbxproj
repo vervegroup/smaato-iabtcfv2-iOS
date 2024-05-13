@@ -21,7 +21,7 @@
 		50392CAB2ACEB2B6006A4D32 /* ConsentStringV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50392CAA2ACEB2B6006A4D32 /* ConsentStringV2.swift */; };
 		50392CAD2ACEC92B006A4D32 /* ConsentStringBuilderV2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50392CAC2ACEC92B006A4D32 /* ConsentStringBuilderV2Tests.swift */; };
 		50392CAF2ACEC96D006A4D32 /* ConsentStringBuildingV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50392CAE2ACEC96D006A4D32 /* ConsentStringBuildingV2.swift */; };
-		F142B52A2093A1C5001ABE60 /* Consent_String_SDK_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F142B5202093A1C5001ABE60 /* Consent_String_SDK_Swift.framework */; };
+		F142B52A2093A1C5001ABE60 /* ConsentStringSDKSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F142B5202093A1C5001ABE60 /* ConsentStringSDKSwift.framework */; };
 		F142B52F2093A1C5001ABE60 /* Consent_String_SDK_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F142B52E2093A1C5001ABE60 /* Consent_String_SDK_SwiftTests.swift */; };
 		F142B5312093A1C5001ABE60 /* Consent_String_SDK_Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = F142B5232093A1C5001ABE60 /* Consent_String_SDK_Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F142B53F2093A207001ABE60 /* ConsentString.swift in Sources */ = {isa = PBXBuildFile; fileRef = F142B53A2093A206001ABE60 /* ConsentString.swift */; };
@@ -56,10 +56,10 @@
 		50392CAA2ACEB2B6006A4D32 /* ConsentStringV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentStringV2.swift; sourceTree = "<group>"; };
 		50392CAC2ACEC92B006A4D32 /* ConsentStringBuilderV2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentStringBuilderV2Tests.swift; sourceTree = "<group>"; };
 		50392CAE2ACEC96D006A4D32 /* ConsentStringBuildingV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentStringBuildingV2.swift; sourceTree = "<group>"; };
-		F142B5202093A1C5001ABE60 /* Consent_String_SDK_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Consent_String_SDK_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F142B5202093A1C5001ABE60 /* ConsentStringSDKSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ConsentStringSDKSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F142B5232093A1C5001ABE60 /* Consent_String_SDK_Swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Consent_String_SDK_Swift.h; sourceTree = "<group>"; };
 		F142B5242093A1C5001ABE60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F142B5292093A1C5001ABE60 /* Consent String SDK SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Consent String SDK SwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F142B5292093A1C5001ABE60 /* ConsentStringSDKSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConsentStringSDKSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F142B52E2093A1C5001ABE60 /* Consent_String_SDK_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consent_String_SDK_SwiftTests.swift; sourceTree = "<group>"; };
 		F142B5302093A1C5001ABE60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F142B53A2093A206001ABE60 /* ConsentString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentString.swift; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F142B52A2093A1C5001ABE60 /* Consent_String_SDK_Swift.framework in Frameworks */,
+				F142B52A2093A1C5001ABE60 /* ConsentStringSDKSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +137,8 @@
 		F142B5212093A1C5001ABE60 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F142B5202093A1C5001ABE60 /* Consent_String_SDK_Swift.framework */,
-				F142B5292093A1C5001ABE60 /* Consent String SDK SwiftTests.xctest */,
+				F142B5202093A1C5001ABE60 /* ConsentStringSDKSwift.framework */,
+				F142B5292093A1C5001ABE60 /* ConsentStringSDKSwiftTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -181,9 +181,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		F142B51F2093A1C5001ABE60 /* Consent String SDK Swift */ = {
+		F142B51F2093A1C5001ABE60 /* ConsentStringSDKSwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F142B5342093A1C5001ABE60 /* Build configuration list for PBXNativeTarget "Consent String SDK Swift" */;
+			buildConfigurationList = F142B5342093A1C5001ABE60 /* Build configuration list for PBXNativeTarget "ConsentStringSDKSwift" */;
 			buildPhases = (
 				F142B51B2093A1C5001ABE60 /* Sources */,
 				F142B51C2093A1C5001ABE60 /* Frameworks */,
@@ -194,14 +194,14 @@
 			);
 			dependencies = (
 			);
-			name = "Consent String SDK Swift";
+			name = ConsentStringSDKSwift;
 			productName = "Consent String SDK Swift";
-			productReference = F142B5202093A1C5001ABE60 /* Consent_String_SDK_Swift.framework */;
+			productReference = F142B5202093A1C5001ABE60 /* ConsentStringSDKSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		F142B5282093A1C5001ABE60 /* Consent String SDK SwiftTests */ = {
+		F142B5282093A1C5001ABE60 /* ConsentStringSDKSwiftTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F142B5372093A1C5001ABE60 /* Build configuration list for PBXNativeTarget "Consent String SDK SwiftTests" */;
+			buildConfigurationList = F142B5372093A1C5001ABE60 /* Build configuration list for PBXNativeTarget "ConsentStringSDKSwiftTests" */;
 			buildPhases = (
 				F142B5252093A1C5001ABE60 /* Sources */,
 				F142B5262093A1C5001ABE60 /* Frameworks */,
@@ -212,9 +212,9 @@
 			dependencies = (
 				F142B52C2093A1C5001ABE60 /* PBXTargetDependency */,
 			);
-			name = "Consent String SDK SwiftTests";
+			name = ConsentStringSDKSwiftTests;
 			productName = "Consent String SDK SwiftTests";
-			productReference = F142B5292093A1C5001ABE60 /* Consent String SDK SwiftTests.xctest */;
+			productReference = F142B5292093A1C5001ABE60 /* ConsentStringSDKSwiftTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -237,7 +237,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F142B51A2093A1C5001ABE60 /* Build configuration list for PBXProject "Consent String SDK Swift" */;
+			buildConfigurationList = F142B51A2093A1C5001ABE60 /* Build configuration list for PBXProject "ConsentStringSDKSwift" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -249,8 +249,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F142B51F2093A1C5001ABE60 /* Consent String SDK Swift */,
-				F142B5282093A1C5001ABE60 /* Consent String SDK SwiftTests */,
+				F142B51F2093A1C5001ABE60 /* ConsentStringSDKSwift */,
+				F142B5282093A1C5001ABE60 /* ConsentStringSDKSwiftTests */,
 			);
 		};
 /* End PBXProject section */
@@ -312,7 +312,7 @@
 /* Begin PBXTargetDependency section */
 		F142B52C2093A1C5001ABE60 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F142B51F2093A1C5001ABE60 /* Consent String SDK Swift */;
+			target = F142B51F2093A1C5001ABE60 /* ConsentStringSDKSwift */;
 			targetProxy = F142B52B2093A1C5001ABE60 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -532,7 +532,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F142B51A2093A1C5001ABE60 /* Build configuration list for PBXProject "Consent String SDK Swift" */ = {
+		F142B51A2093A1C5001ABE60 /* Build configuration list for PBXProject "ConsentStringSDKSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F142B5322093A1C5001ABE60 /* Debug */,
@@ -541,7 +541,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F142B5342093A1C5001ABE60 /* Build configuration list for PBXNativeTarget "Consent String SDK Swift" */ = {
+		F142B5342093A1C5001ABE60 /* Build configuration list for PBXNativeTarget "ConsentStringSDKSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F142B5352093A1C5001ABE60 /* Debug */,
@@ -550,7 +550,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F142B5372093A1C5001ABE60 /* Build configuration list for PBXNativeTarget "Consent String SDK SwiftTests" */ = {
+		F142B5372093A1C5001ABE60 /* Build configuration list for PBXNativeTarget "ConsentStringSDKSwiftTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F142B5382093A1C5001ABE60 /* Debug */,
