@@ -8,7 +8,6 @@ This library is a Swift reference implementation for dealing with consent string
 It should be used by anyone who receives or sends consent information like vendors that receive consent data from a partner, or consent management platforms that need to encode/decode the global cookie.
 
 The IAB specification for the consent string format is available on the [IAB Github](https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework/blob/master/Consent-string-and-vendor-list-formats-v1.1-Final.md) (section "Vendor Consent Cookie Format").
-
 This library fully supports the version v1.1 of the specification. It can encode and decode consent strings with version bit 1.
 DESC
 
