@@ -1,9 +1,9 @@
 //
-//  String.swift
-//  gdprConsentStringSwift
+//  String.h
+//  ConsentStringSDKSwift
 //
-//  Created by Daniel Kanaan on 4/17/18.
-//  Copyright © 2018 Daniel Kanaan. All rights reserved.
+//  Created by Ashwinee Mhaske on 10/05/24.
+//  Copyright © 2024 Smaato Inc. All rights reserved.
 //
 
 import Foundation
